@@ -1,0 +1,192 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context=".ui.detailwisata.DetailWisataActivity"
+    tools:showIn="@layout/activity_detail_wisata">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="4dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:clickable="true"
+                    android:foreground="?android:attr/selectableItemBackground"
+                    android:orientation="horizontal"
+                    android:padding="16dp">
+
+                    <ImageView
+                        android:layout_width="24dp"
+                        android:layout_height="24dp"
+                        android:src="@drawable/ic_wisata" />
+
+                    <TextView
+                        android:id="@+id/nama_wisata"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_weight="1"
+                        android:paddingLeft="16dp"
+                        android:text="Nama Tempat Wisata" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:clickable="true"
+                    android:foreground="?android:attr/selectableItemBackground"
+                    android:orientation="horizontal"
+                    android:padding="16dp">
+
+                    <ImageView
+                        android:layout_width="24dp"
+                        android:layout_height="24dp"
+                        android:src="@drawable/ic_map" />
+
+                    <TextView
+                        android:id="@+id/alamat_wisata"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_weight="1"
+                        android:paddingLeft="16dp"
+                        android:text="Alamat Wisata" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:clickable="true"
+                    android:foreground="?android:attr/selectableItemBackground"
+                    android:orientation="horizontal"
+                    android:padding="16dp">
+
+                    <ImageView
+                        android:layout_width="24dp"
+                        android:layout_height="24dp"
+                        android:src="@drawable/ic_kabupaten" />
+
+                    <TextView
+                        android:id="@+id/kabupaten_wisata"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_weight="1"
+                        android:paddingLeft="16dp"
+                        android:text="Kabupaten" />
+                </LinearLayout>
+
+
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="10dp">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Map"
+                    android:padding="10dp"
+                    android:textSize="18sp" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@color/colorPrimary" />
+
+                <fragment xmlns:android="http://schemas.android.com/apk/res/android"
+                    xmlns:tools="http://schemas.android.com/tools"
+                    android:id="@+id/maps"
+                    android:layout_marginTop="4dp"
+                    android:name="com.google.android.gms.maps.SupportMapFragment"
+                    android:layout_width="match_parent"
+                    android:layout_height="200dp"
+                    tools:context=".activities.MapsActivity" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:gravity="end">
+
+                    <Button
+                        android:id="@+id/btn_navigasi"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Navigasi"
+                        android:theme="@style/PrimaryFlatButton" />
+
+                    <Button
+                        android:id="@+id/btn_lihat"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Lihat"
+                        android:theme="@style/PrimaryFlatButton" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="10dp">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Description"
+                    android:padding="10dp"
+                    android:textSize="18sp" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@color/colorPrimary" />
+
+                <TextView
+                    android:id="@+id/description"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Jika anda ingin merasakan sensasi yang berbeda dan langka saat berwisata, kami mengajak anda untuk datang berkunjung ke salah satu objek wisata yang ada di Kabupaten Pamekasan. Objek wisata ini dikenal dengan Api Tak Kunjung Padam yang terletak tepatnya di desa Larangan Tokol, kecamatan Tlanakan kabupaten Pamekasan.\n\nMembutuhkan waktu sekitar 15 menit dengan jarak 4 km dari pusat kota Pamekasan untuk bisa sampai di objek wisata Api Tak Kunjung Padam ini. Tentunya dengan akses jalan yang sangat baik untuk bisa dilewati kendaraan pribadi maupun kendaraan umum. Dari akses Tol Suramadu anda membutuhkan waktu sekitar kurang lebih dua jam perjalanan.\n\nBila anda memilih menggunakan kendaraan umum sudah banyak bus mini dan bus patas yang bisa anda pilih dengan membayar harga sekitar Rp. 15.000 saja. Perjalanan dilanjutkan dengan berjalan kaki menempuh jarak sekitar kurang lebih 800 meter dari jalan raya.\nSama dengan namanya Api Tak Kunjung Padam merupakan sebuah objek wisata berupa semburan api yang tidak akan pernah bisa padam sekalipun diguyur air. Salah satu keajaiban api abadi yang masih terdapat di Pamekasan ini sudah sangat terkenal khususnya pada masyarakat sekitar. Nyala api yang berasal dari bawah permukaan tanah ini seperti nyala api kompor gas yang muncul ke atas permukaan tanah.\n\nMenikmati Nyala Api Tak Kunjung Padam\nAnda tidak perlu khawatir semburan nyala api akan melebar ke tempat lainnya karena nyala api hanya hidup disekitar tanah yang telah dilingkari pagar. Semakin anda menggali tanah yang terdapat di dalam area lingkaran pagar maka semakin besar semburan nyala api yang dihasilkan.\n\n\nAnehnya lagi, jika anda menggali tanah di luar area yang telah dipagari maka tidak akan ada dapatkan semburan nyala api. Dengan 50 titik semburan nyala api yang ada di area lingkaran padam kami tetap mengingatkan anda untuk selalu berhati – hati utamanya bagi anda yang membawa anak kecil.\n\nSemburan nyala api yang seperti nyala kompor dan bertekanan udara ini sering dimanfaatkan masyarakat sekitar dan pengunjung untuk memasak. Di sekitar area objek wisata Api Tak Kunjung Padam ini banyak pedagang yang menjual jagung untuk bisa di bakar di atas semburan nyala api. Hasilnya sama seperti jika anda membakar jagung di atas tungku api seperti pada umumnya, cukup sekitar beberapa menit saja jagung pun matang. Sebenaranya tidak hanya jagung saja, anda bisa memasak bahan lainnya misal saja memasak telur ceplok.\n\nSudah pernah dilakukan sebuah penelitian untuk mengetahui kandungan gas dari semburan nyala api yang terdapat di objek wisata Api Tak Kunjung Padam ini, namun hasilnya nihil tidak ditemukan kandungan gas apapun.\n\nKonon ramai terdengar sebuah cerita lama dan sangat dipercaya oleh warga sekitar bahwa sejarah semburan nyala api atau api alam tersebut pertama kali ditemukan oleh Ki Moko dan sebuah sumber air belerang di dusan Jangkah, Ki Moko merepukan seorang yang terkenal sakti di Madura pada kala itu.\n\nSelain unik dan aneh Objek Wisata Api Tak Kunjung Padam ini menawarkan sensasi berwisata yang memang berbeda dengan objek wisata lainnya. Tidak banyak kita jumpai wisata seperti ini, mungkin bisa dikatakan masih langka di Indonesia dan hanya ada di Pulau Madura tepatnya kabupaten Pamekasan." />
+
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+
+    </LinearLayout>
+
+</androidx.core.widget.NestedScrollView>
